@@ -4,7 +4,7 @@ import { useFrame } from '@react-three/fiber'
 
 export function Model(props) {
   const ref = useRef()
-  const { nodes, materials } = useGLTF('https://p-alom-a.github.io/scan_demo/sculpta.glb')
+  const { nodes, materials } = useGLTF('./sculpta.glb')
 
   useFrame(() => {
     ref.current.rotation.y -= 0.004
@@ -148,4 +148,4 @@ export function Model(props) {
   )
 }
 
-useGLTF.preload('/sculpta.glb')
+useGLTF.preload('./sculpta.glb')
