@@ -1,5 +1,6 @@
 {
   "name": "scan_demo",
+  "homepage": "https://p-alom-a.github.io/scan_demo/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,11 +8,14 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.6",
     "@react-three/fiber": "^9.4.0",
+    "ghpages": "^0.0.10",
     "gsap": "^3.13.0",
     "maath": "^0.10.8",
     "react": "^19.1.1",

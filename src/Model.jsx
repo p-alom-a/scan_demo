@@ -3,11 +3,10 @@ import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 
 export function Model(props) {
-  const ref = useRef()
-  const { nodes, materials } = useGLTF('./sculpta.glb')
+  const { nodes, materials } = useGLTF('https://p-alom-a.github.io/scan_demo/sculpta.glb')
 
   useFrame(() => {
-    ref.current.rotation.y -= 0.004
+    ref.current.rotation.y += 0.0005
   })
 
   return (
@@ -148,4 +147,4 @@ export function Model(props) {
   )
 }
 
-useGLTF.preload('./sculpta.glb')
+useGLTF.preload('https://p-alom-a.github.io/scan_demo/sculpta.glb')
