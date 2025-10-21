@@ -1,0 +1,151 @@
+import React, { useRef } from 'react'
+import { useGLTF } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
+
+export function Model(props) {
+  const ref = useRef()
+  const { nodes, materials } = useGLTF('/sculpta.glb')
+
+  useFrame(() => {
+    ref.current.rotation.y -= 0.004
+  })
+
+  return (
+    <group ref={ref} {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_1.geometry}
+        material={materials.Material_0}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_2.geometry}
+        material={materials.Material_1}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_3.geometry}
+        material={materials.Material_2}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_4.geometry}
+        material={materials.Material_3}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_5.geometry}
+        material={materials.Material_4}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_6.geometry}
+        material={materials.Material_5}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_7.geometry}
+        material={materials.Material_6}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_8.geometry}
+        material={materials.Material_7}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_9.geometry}
+        material={materials.Material_8}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_10.geometry}
+        material={materials.Material_9}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_11.geometry}
+        material={materials.Material_10}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_12.geometry}
+        material={materials.Material_11}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_13.geometry}
+        material={materials.Material_12}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_14.geometry}
+        material={materials.Material_13}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_15.geometry}
+        material={materials.Material_14}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_16.geometry}
+        material={materials.Material_15}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_17.geometry}
+        material={materials.Material_16}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_18.geometry}
+        material={materials.Material_17}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_19.geometry}
+        material={materials.Material_18}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_20.geometry}
+        material={materials.Material_19}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_21.geometry}
+        material={materials.Material_20}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Mesh_0_22.geometry}
+        material={materials.Material_21}
+      />
+    </group>
+  )
+}
+
+useGLTF.preload('/sculpta.glb')
